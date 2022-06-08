@@ -20,7 +20,7 @@ const LoanApplicationDetails = ({formData , setFormData , setFormSubmission}) =>
     <Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
       <h3>Loan Application Details</h3>
       <div className="col-md-6 offset-md-3">
-      <Form.Group controlId="loan_amount">
+      <Form.Group className="form-group" controlId="loan_amount">
           <Form.Label>Loan amount</Form.Label>
           <Form.Control
             type="number"
@@ -44,7 +44,7 @@ const LoanApplicationDetails = ({formData , setFormData , setFormSubmission}) =>
           )}
         </Form.Group>
 
-        <Form.Group controlId="interest_rate">
+        <Form.Group className="form-group" controlId="interest_rate">
           <Form.Label>Interest Rate (%)</Form.Label>
           <Form.Control
             type="number"
@@ -68,7 +68,7 @@ const LoanApplicationDetails = ({formData , setFormData , setFormSubmission}) =>
           )}
         </Form.Group>
 
-        <Form.Group controlId="loan_tenure">
+        <Form.Group className="form-group" controlId="loan_tenure">
           <Form.Label>Loan Tenure (years)</Form.Label>
           <Form.Control
             type="number"

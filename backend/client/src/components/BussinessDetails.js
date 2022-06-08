@@ -14,7 +14,7 @@ const BussinessDetails = ({setActiveTab , formData , setFormData}) => {
     <Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
       <h3>Bussiness Details</h3>
       <div className="col-md-6 offset-md-3">
-        <Form.Group controlId="bussiness_name">
+        <Form.Group className="form-group" controlId="bussiness_name">
           <Form.Label>Bussiness Name</Form.Label>
           <Form.Control
             type="text"
@@ -38,7 +38,7 @@ const BussinessDetails = ({setActiveTab , formData , setFormData}) => {
           )}
         </Form.Group>
 
-        <Form.Group controlId="gst_no">
+        <Form.Group className="form-group" controlId="gst_no">
           <Form.Label>GST number</Form.Label>
           <Form.Control
             type="number"
@@ -62,7 +62,7 @@ const BussinessDetails = ({setActiveTab , formData , setFormData}) => {
           )}
         </Form.Group>
     
-        <Form.Group controlId="address">
+        <Form.Group className="form-group" controlId="address">
           <Form.Label>Address</Form.Label>
           <Form.Control
             type="text"
@@ -85,7 +85,7 @@ const BussinessDetails = ({setActiveTab , formData , setFormData}) => {
           )}
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="secondary" type="submit">
           Next
         </Button>
       </div>

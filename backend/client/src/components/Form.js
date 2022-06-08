@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PersonalDetails from './PersonalDetails';
 import BussinessDetails from './BussinessDetails';
 import LoanApplicationDetails from './LoanApplicationDetails'
+import Submission from "./Submission";
 
 const Form = () => {
     const [activeTab , setActiveTab] = useState(0)
@@ -43,10 +44,10 @@ const Form = () => {
     }
   return (
     <div>
-        {formSubmission ? 'Application Submitted' 
+        {formSubmission ? <Submission formData={formData}/> 
             :
             <div className="form-container">
-                <h2>Loan Application</h2>
+                <h1>Loan Application</h1>
                 <ul className="nav nav-tabs">
                     <li className={activeTab === 0 ? 'active nav-item nav-link' : 'nav-item nav-link'}>
                         Step 1

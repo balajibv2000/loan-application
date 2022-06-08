@@ -14,7 +14,7 @@ const PersonalDetails = ({ formData , setActiveTab , setFormData , test , setTes
     <Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
       <h3>Personal Details</h3>
       <div className="col-md-6 offset-md-3">
-        <Form.Group controlId="first_name">
+        <Form.Group className="form-group" controlId="first_name">
           <Form.Label>First Name</Form.Label>
           <Form.Control
             type="text"
@@ -38,20 +38,19 @@ const PersonalDetails = ({ formData , setActiveTab , setFormData , test , setTes
           )}
         </Form.Group>
 
-        <Form.Group controlId="last_name">
+        <Form.Group className="form-group" controlId="last_name">
           <Form.Label>Last Name</Form.Label>
           <Form.Control
             type="text"
             name="last_name"
             placeholder="Enter your last name"
-            autoComplete="off"
             onChange={(e) => {
               setFormData({ ...formData, last_name: e.target.value });
             }}
             ref={register({
               required: 'Last name is required.',
               pattern: {
-                value: /^[a-zA-Z]+$/,
+
                 message: 'Last name should contain only characters.'
               }
             })}
@@ -61,13 +60,12 @@ const PersonalDetails = ({ formData , setActiveTab , setFormData , test , setTes
             <p className="errorMsg">{errors.last_name.message}</p>
           )}
         </Form.Group>
-        <Form.Group controlId="user_email">
+        <Form.Group className="form-group" controlId="user_email">
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
             name="user_email"
             placeholder="Enter your email address"
-            autoComplete="off"
             onChange={(e) => {
               setFormData({ ...formData, user_email: e.target.value });
             }}
@@ -85,7 +83,7 @@ const PersonalDetails = ({ formData , setActiveTab , setFormData , test , setTes
           )}
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="secondary" type="submit">
           Next
         </Button>
       </div>
