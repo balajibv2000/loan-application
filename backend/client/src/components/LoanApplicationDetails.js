@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { Form, Button } from 'react-bootstrap';
-const baseUrl = 'http://localhost:3000/details'
+const baseUrl = 'https://dygnify-loan-application.herokuapp.com/details'
 
 const LoanApplicationDetails = ({formData , setFormData , setFormSubmission}) => {
   const { register, handleSubmit, errors } = useForm();

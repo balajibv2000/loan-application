@@ -1,7 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
+const path = require('path');
 var port = process.env.PORT || 8080;
+//var port = 3005
 
 const app = express()
 
@@ -70,9 +72,17 @@ app.post('/details' , async (req , res) => {
 })
 
 if(process.env.NONE_ENV === 'production'){
-    app.use(express.static('../build'))
+    app.use(express.static(path.join(__dirname , 'client' ,'build' )))
+    app.get('/' , async (req , res) => {
+        console.log('inside server')
+        await res.sendFile(path.resolve(__dirname, 'client' , 'build', 'index.html'))
+    })
 }
 
+app.use(express.static(path.join(__dirname , 'client' ,'build' )))
+app.get('/' , (req , res) => {
+    res.sendFile(path.join(__dirname, 'client' , 'build', 'index.html'))
+})
 
 app.listen(port , () =>{
     console.log(`Server running on port ${port}`)

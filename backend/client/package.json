@@ -2,6 +2,7 @@
   "name": "loan-application",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://dygnify-loan-application.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
