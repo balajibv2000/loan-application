@@ -1,0 +1,26 @@
+.form-container{
+    width: 100%;
+    margin: 2em 0 0 0;
+    padding: 0;
+}
+
+.form-container h2 {
+    margin: 1em;
+}
+
+.nav-item{
+    cursor: pointer;
+    border: 1px solid #a9acaf !important;
+    border-bottom: 0 !important;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin-right: 0.5em;
+}
+
+.nav-tabs{
+    width: 100%;
+    margin: 1em 0 0 0;
+    border-bottom: 1px solid #a9acaf;
+    padding-left: 1em;
+}
+
